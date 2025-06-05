@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Entre Sombras y Amor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(#000000, #1a001a);
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Cinzel', serif;
+      position: relative;
+      color: #fff;
+    }
+
+    .carta {
+      width: 80%;
+      max-width: 600px;
+      margin: 100px auto;
+      padding: 40px;
+      background: url(img/calaberas.jpg) no-repeat center/cover;
+      border: 2px solid #cc0c57;
+      border-radius: 20px;
+      box-shadow: 0 0 40px #ff007f66, inset 0 0 20px #ff007f33;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .carta::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .carta h1, .carta p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .carta h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 52px;
+      margin-bottom: 25px;
+      color: #ffb4e6;
+      text-shadow: 0 0 12px #ff007f;
+    }
+
+    .carta p {
+      font-size: 20px;
+      line-height: 1.9;
+      color: #ffe3f5;
+      margin-bottom: 15px;
+      text-shadow: 0 0 6px #8c0f4c;
+    }
+
+    .mensaje, .imagen {
+      position: absolute;
+      animation: flotar 12s infinite;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .mensaje {
+      font-family: 'Great Vibes', cursive;
+      font-size: 22px;
+      color: #ffaad4;
+    }
+
+    .imagen img {
+      width: 80px;
+      height: auto;
+      filter: drop-shadow(0 0 6px #ffaad4aa);
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0); opacity: 0; }
+      10% { opacity: 1; }
+      50% { transform: translateY(-25px); opacity: 1; }
+      90% { opacity: 0; }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="carta">
+    <h1>Entre Sombras y Latidos</h1>
+    <p>En cada rincón oscuro de mi alma, hay una luz que me guía... y esa luz eres tú.</p>
+    <p>Tus palabras son hechizos, tus miradas dagas dulces, tu amor mi mayor sortilegio.</p>
+    <p>En un mundo lleno de caos, tú eres mi paz embrujada, mi tormenta favorita, mi universo de tinta y sangre.</p>
+    <p>Cada noche te pienso como quien invoca a un ser celestial, y cada amanecer te deseo como quien ha sobrevivido al infierno.</p>
+    <p>No hay conjuro más fuerte que el amor que siento por ti.</p>
+  </div>
+
+  <!-- Mensajes flotantes -->
+  <div class="mensaje" style="top: 5%; left: 10%;">Eres mi hechizo favorito</div>
+  <div class="mensaje" style="top: 15%; left: 70%;">Te pienso en cada sombra</div>
+  <div class="mensaje" style="top: 30%; left: 15%;">Mi amor no conoce luz sin ti</div>
+  <div class="mensaje" style="top: 45%; left: 75%;">Tu voz me salva</div>
+  <div class="mensaje" style="top: 55%; left: 25%;">Eres mi infinito</div>
+  <div class="mensaje" style="top: 70%; left: 60%;">Mis latidos llevan tu nombre</div>
+  <div class="mensaje" style="top: 85%; left: 10%;">Te amaría en todas mis vidas</div>
+  <div class="mensaje" style="top: 80%; left: 80%;">Por ti, todo</div>
+
+  <!-- Imágenes flotantes -->
+  <div class="imagen" style="top: 10%; left: 15%;"><img src="img/pngtree-red-rose-with-thorns-gothic-floral-art-png-image_20343027.png" alt="Rosa 1"></div>
+  <div class="imagen" style="top: 20%; left: 70%;"><img src="img/pngtree-red-rose-with-thorns-gothic-floral-art-png-image_20343027.png" alt="Rosa 2"></div>
+  <div class="imagen" style="top: 35%; left: 25%;"><img src="img/corazon.png" alt="Corazón 1"></div>
+  <div class="imagen" style="top: 40%; left: 80%;"><img src="img/pupet.png" alt="Luna 1"></div>
+  <div class="imagen" style="top: 50%; left: 10%;"><img src="img/pngtree-red-rose-with-thorns-gothic-floral-art-png-image_20343027.png" alt="Pluma 1"></div>
+  <div class="imagen" style="top: 60%; left: 60%;"><img src="img/pngtree-red-rose-with-thorns-gothic-floral-art-png-image_20343027.png" alt="Rosa 3"></div>
+  <div class="imagen" style="top: 75%; left: 20%;"><img src="img/corazon.png" alt="Corazón 2"></div>
+  <div class="imagen" style="top: 80%; left: 75%;"><img src="img/pngtree-red-rose-with-thorns-gothic-floral-art-png-image_20343027.png" alt="Estrella 1"></div>
+  <div class="imagen" style="top: 85%; left: 40%;"><img src="img/pngtree-red-rose-with-thorns-gothic-floral-art-png-image_20343027.png" alt="Rosa 4"></div>
+  <div class="imagen" style="top: 90%; left: 5%;"><img src="img/pupet.png" alt="Luna 2"></div>
+
+  <script>
+    const mensajes = document.querySelectorAll('.mensaje');
+    const imagenes = document.querySelectorAll('.imagen');
+
+    mensajes.forEach(msg => {
+      const delay = Math.random() * 5 + 1;
+      msg.style.animationDelay = `${delay}s`;
+    });
+
+    imagenes.forEach(img => {
+      const delay = Math.random() * 5 + 2;
+      img.style.animationDelay = `${delay}s`;
+    });
+  </script>
+</body>
+</html>
